@@ -60,10 +60,10 @@ data_c2 = subset(data, c2_high > 0 & c1_high ==0)
 data_c3 = subset(data, c3_high > 0 & c2_high ==0) 
 data_c4 = subset(data, c4_high > 0 & c3_high ==0) 
 
-plot(data_c1)
-plot(data_c2)
-plot(data_c3)
-plot(data_c4)
+plot(data_c1$x, data_c1$y)
+plot(data_c2$x, data_c2$y)
+plot(data_c3$x, data_c3$y)
+plot(data_c4$x, data_c4$y)
 
 
 MD_border1 = ppp(data_c1$x, data_c1$y, window = w)
@@ -97,9 +97,10 @@ plot(L_c4,
      xlab = "Distance: C4", 
      legend = F)
 mtext("Global Cluster of Unique Homes at Risk of Storm Surge by Hurricane Class", 
-      side = 3, 
-      line = -2, 
-      outer = TRUE, 
+      side = 3,       
+      line = -2,       
+      outer = TRUE,       
       cex = 1.0)
 ```
 
+If the points are inside the envelope, then they are randomly distributed. If they are below the red line, then they are uniformly distributed.
